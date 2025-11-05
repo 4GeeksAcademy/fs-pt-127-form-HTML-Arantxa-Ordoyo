@@ -13,8 +13,8 @@
 
 <body>
 
-    <!--Usamos un card para mejorar el diseño u es donde pondremos el titulo-->
-    
+  <!--Usamos un card para mejorar el diseño u es donde pondremos el titulo-->
+
 
   <div class="card container  p-0 my-4 d-flex border ">
     <div class="card-header bg-light">
@@ -22,7 +22,7 @@
     </div>
     <!--Dentro del card-body ponemos el form-->
     <div class="card-body">
-      <form class="row g-3 " id="form-generico">
+      <form class="row g-3 needs-validation" id="form-generico" novalidate>
         <!-- Normalmente se usa font-weight-bold para la negrita pero no me a funcionado y he usado css-->
         <div class="alert alert-danger ">Some fields are missing</div>
         <!--Los for del label y el id del input tienen que ser iguales-->
@@ -32,24 +32,43 @@
         <!--form-label es para que quede alineado con los campos del formulario-->
         <!--form-control da estilo visual y ocupa el 100%-->
         <!--Card-->
-        <div class="col-md-4">        
+        <div class="col-md-4">
           <label for="validationCard  " class="form-label">Card #</label>
           <input type="number" class="form-control" id="validationCard" placeholder="XXXXXXXXXXXXXX" required>
+          <div class="valid-feedback">
+            ¡Todo ok!
+          </div>
+          <div class="invalid-feedback">
+            ¡Escribe la targeta!
+          </div>
         </div>
 
         <!--CVC-->
-        <div class="col-md-4">         
+        <div class="col-md-4">
           <label for="validationCVC" class="form-label">CVC #</label>
           <input type="number" class="form-control" id="validationCVC" placeholder="0000" required>
+          <div class="valid-feedback">
+            ¡Todo ok!
+          </div>
+          <div class="invalid-feedback">
+            ¡Escribe el CVC!
+          </div>
         </div>
-        
+
         <!--Amount-->
-        <div class="col-md-4">          
+        <div class="col-md-4">
           <label for="validationAmount" class="form-label">Amount</label>
           <div class="input-group has-validation">
             <span class="input-group-text" id="inputGroupPrepend">$</span>
             <!--el min es para que empiece en 0 y step es para que la flechita vaya subiendo de 0.01 para poder añadir decimales-->
-           <input type="number" class="form-control" id="validationAmount"aria-describedby="inputGroupPrepend" min="0"step="0.01" required>
+            <input type="number" class="form-control" id="validationAmount" aria-describedby="inputGroupPrepend" min="0"
+              step="0.01" required>
+            <div class="valid-feedback">
+              ¡Todo ok!
+            </div>
+            <div class="invalid-feedback">
+              ¡Escribe la cantidad!
+            </div>
           </div>
         </div>
 
@@ -57,18 +76,36 @@
         <div class="col-md-6">
           <label for="validationName" class="form-label">First Name</label>
           <input type="text" class="form-control" id="validationName" required>
+          <div class="valid-feedback">
+            ¡Todo ok!
+          </div>
+          <div class="invalid-feedback">
+            ¡Escribe tu nombre!
+          </div>
         </div>
 
         <!--Last Name-->
         <div class="col-md-6">
           <label for="validationLastName" class="form-label">Last Name</label>
           <input type="text" class="form-control" id="validationLastName" required>
+          <div class="valid-feedback">
+            ¡Todo ok!
+          </div>
+          <div class="invalid-feedback">
+            ¡Escribe tu apellido!
+          </div>
         </div>
 
         <!--City-->
         <div class="col-md-6">
           <label for="validationCity" class="form-label">City</label>
           <input type="text" class="form-control" id="validationCity" required>
+          <div class="valid-feedback">
+            ¡Todo ok!
+          </div>
+          <div class="invalid-feedback">
+            ¡Escribe la ciudad!
+          </div>
         </div>
 
         <!--State-->
@@ -76,14 +113,31 @@
           <label for="validationState" class="form-label">State</label>
           <select class="form-select" id="validationState" required>
             <option selected disabled value="">Pick a state</option>
-            <option>...</option>
+            <option>España</option>
+            <option>Japon</option>
+            <option>Mexico</option>
+            <option>Venezuela</option>
+
+
           </select>
+          <div class="valid-feedback">
+            ¡Todo ok!
+          </div>
+          <div class="invalid-feedback">
+            ¡Selecciona un Estado!
+          </div>
         </div>
 
         <!--Postal Code-->
         <div class="col-md-3">
           <label for="validationPostalCode" class="form-label">Postal code</label>
           <input type="text" class="form-control" id="validationPostalCode" required>
+          <div class="valid-feedback">
+            ¡Todo ok!
+          </div>
+          <div class="invalid-feedback">
+            ¡Escribe el codigo postal!
+          </div>
         </div>
 
         <!--Visa-->
@@ -92,23 +146,53 @@
           <!--le damos un fondo y ponemos texto blanco le decimos que se vuelva display flex y que se reparta el espacion con el around-->
           <div class="  bg-secondary text-white rounded d-flex justify-content-around px-2 py-1">
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="validationVisa1">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="validationVisa1" required>
               <label class="form-check-label" for="validationVisa1"> <i class="fab fa-cc-mastercard fa-xs"></i></label>
+              <div class="valid-feedback">
+                ¡Todo ok!
+              </div>
+              <div class="invalid-feedback">
+                ¡Selecciona una visa!
+              </div>
             </div>
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="validationVisa2">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="validationVisa2" required>
               <label class="form-check-label" for="validationVisa2"> <i class="fab fa-cc-visa fa-xs "></i></label>
+              <div class="valid-feedback">
+                ¡Todo ok!
+              </div>
+              <div class="invalid-feedback">
+                ¡Selecciona una visa!
+              </div>
             </div>
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="validationVisa3">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="validationVisa3" required>
               <label class="form-check-label" for="validationVisa3"> <i class="fab fa-cc-diners-club fa-xs"></i></label>
+              <div class="valid-feedback">
+                ¡Todo ok!
+              </div>
+              <div class="invalid-feedback">
+                ¡Selecciona una visa!
+              </div>
             </div>
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="validationVisa4">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="validationVisa4" required>
               <label class="form-check-label" for="validationVisa4"> <i class="fab fa-cc-amex fa-xs"></i></label>
+              <div class="valid-feedback">
+                ¡Todo ok!
+              </div>
+              <div class="invalid-feedback">
+                ¡Selecciona una visa!
+              </div>
             </div>
+
           </div>
+
         </div>
+
+
+
+
 
         <!--DIV VACIO PARA QUE HAGA ESPACIO Y EMPUJE-->
         <div class="col-md-3"></div>
@@ -116,21 +200,28 @@
         <!--Message-->
         <div class="col-md-6">
           <label for="validationMessage" class="form-label">Message</label>
-          <textarea class="form-control" aria-label="With textarea" id="validationMessage"></textarea>
+          <textarea class="form-control" aria-label="With textarea" id="validationMessage" required></textarea>
+          <div class="valid-feedback">
+            ¡Todo ok!
+          </div>
+          <div class="invalid-feedback">
+            ¡Escribe tu mensaje!
+          </div>
           <small class="form-text text-muted">Add any notes here.</small>
+
         </div>
       </form>
     </div>
 
     <!--Cerramos el div del card-body y creamos el card-footer para mejorar el aspecto visual.-->
     <div class="card-footer text-muted  d-flex justify-content-end">
-        <!--el form=form-generico es para decirle que esta dentro del formulario aunque esteticamente este fuera.-->
-      <button class="btn btn-secondary me-2 "   form="form-generico" type="cancel">Cancel</button>
-      <button class="btn btn-primary"  form="form-generico" type="submit">Send</button>
+      <!--el form=form-generico es para decirle que esta dentro del formulario aunque esteticamente este fuera.-->
+      <button class="btn btn-secondary me-2 " form="form-generico" type="cancel">Cancel</button>
+      <button class="btn btn-primary" form="form-generico" type="submit">Send</button>
     </div>
   </div>
 
-
+  <script src="script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     crossorigin="anonymous"></script>
 
