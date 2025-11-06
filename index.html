@@ -117,8 +117,6 @@
             <option>Japon</option>
             <option>Mexico</option>
             <option>Venezuela</option>
-
-
           </select>
           <div class="valid-feedback">
             ¡Todo ok!
@@ -132,62 +130,46 @@
         <div class="col-md-3">
           <label for="validationPostalCode" class="form-label">Postal code</label>
           <input type="text" class="form-control" id="validationPostalCode" required>
-          <div class="valid-feedback">
-            ¡Todo ok!
-          </div>
-          <div class="invalid-feedback">
-            ¡Escribe el codigo postal!
-          </div>
+
         </div>
 
         <!--Visa-->
         <div class="col-md-3">
           <label class="form-label">We accept: </label>
           <!--le damos un fondo y ponemos texto blanco le decimos que se vuelva display flex y que se reparta el espacion con el around-->
-          <div class="  bg-secondary text-white rounded d-flex justify-content-around px-2 py-1">
+          <div class="  bg-secondary text-white rounded d-flex justify-content-around flex-wrap px-2 py-1">
             <div class="form-check form-check-inline">
               <input class="form-check-input" type="radio" name="inlineRadioOptions" id="validationVisa1" required>
               <label class="form-check-label" for="validationVisa1"> <i class="fab fa-cc-mastercard fa-xs"></i></label>
-              <div class="valid-feedback">
-                ¡Todo ok!
-              </div>
-              <div class="invalid-feedback">
-                ¡Selecciona una visa!
-              </div>
+    
             </div>
+       
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="validationVisa2" required>
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="validationVisa2" >
               <label class="form-check-label" for="validationVisa2"> <i class="fab fa-cc-visa fa-xs "></i></label>
-              <div class="valid-feedback">
-                ¡Todo ok!
-              </div>
-              <div class="invalid-feedback">
-                ¡Selecciona una visa!
-              </div>
+
             </div>
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="validationVisa3" required>
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="validationVisa3" >
               <label class="form-check-label" for="validationVisa3"> <i class="fab fa-cc-diners-club fa-xs"></i></label>
-              <div class="valid-feedback">
-                ¡Todo ok!
-              </div>
-              <div class="invalid-feedback">
-                ¡Selecciona una visa!
-              </div>
+
             </div>
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="validationVisa4" required>
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="validationVisa4" >
               <label class="form-check-label" for="validationVisa4"> <i class="fab fa-cc-amex fa-xs"></i></label>
-              <div class="valid-feedback">
-                ¡Todo ok!
-              </div>
-              <div class="invalid-feedback">
-                ¡Selecciona una visa!
-              </div>
+         
+
             </div>
-
+          
           </div>
-
+          <!--No consigo que se me vean las letras o que se vean bonitas si lo pongo dentro del ultimo div 
+          para que actue como hermano se ve muy feo asi que prefiero dejarlo asi como rojo y ya-->
+        <div class="valid-feedback">
+              ¡Todo ok!
+            </div>
+            <div class="invalid-feedback">
+              ¡Selecciona una visa!
+            </div>
         </div>
 
 
